@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Roboto&display=swap');
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; 
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    background-image: linear-gradient(to right bottom, rgba(18, 22, 17, 0.623), rgba(187, 66, 66, 0.8)), url(../image/Beautiful-Norway.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+
+
+.header {
+    padding: 3rem;
+}
+
+.heading-primary {
+    text-align: center;
+    color: #eee;
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: .9rem;
+}
+
+.container {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.input-container {
+    padding: 2rem 0;
+    margin: 0 auto;
+}
+
+[type="search"] {
+    padding: 1.2rem 1rem;
+    border: none;
+    border-radius: .9rem;
+    outline: none;
+    width: 30%;
+    position: relative;
+    transform: translateX(-3rem);
+}
+
+.btn {
+    padding: 1.2rem 1rem;
+    border: none;
+    border-radius: .9rem;
+    outline: none;
+    width: 8%;
+    font-size: 1.5rem;
+    background-color: #333;
+    color: #eee;
+    position: absolute;
+    top: 3;
+    right: 35%;
+    cursor: pointer;
+}
+
+.weather-result {
+    height: 50vh;
+}
+
+.heading-tertiary {
+    text-align: center;
+    color: #eee;
+    margin-top: 1.5rem;
+}
+
+.header-city-main {
+    display: block;
+    font-weight: 400;
+    font-size: 5rem;
+}
+
+.header-city-sub {
+    display: block;
+    font-weight: 400;
+    font-size: 2.5rem;
+}
+
+.header-city-sub-degree {
+    display: block;
+    font-weight: 700;
+    font-size: 8rem;
+}
+
+.header-city-sub-weather {
+    display: block;
+    font-weight: 400;
+    font-size: 2.5rem;
+}
