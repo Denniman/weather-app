@@ -70,18 +70,24 @@ body {
 }
 
 .weather-result {
+    /* display: none; */
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 0 auto;
     height: 50vh;
+    width: 50%;
+    border-radius: 3rem;
 }
 
 .heading-tertiary {
     text-align: center;
-    color: #eee;
-    margin-top: 1.5rem;
+    color: #333;
+    padding-top: 5rem;
+    margin-top: 2.5rem;
 }
 
 .header-city-main {
     display: block;
-    font-weight: 400;
+    font-weight: 700;
     font-size: 5rem;
     margin-bottom: 2rem;
 }
@@ -89,8 +95,8 @@ body {
 .header-city-sub {
     display: block;
     font-weight: 400;
-    font-size: 2.5rem;
-    letter-spacing: .8rem;
+    font-size: 2rem;
+    letter-spacing: .5rem;
 }
 
 .header-city-sub-degree {
@@ -128,6 +134,8 @@ body {
 
     .weather-result {
         margin-top: 5rem;
+        width: 80%;
+        height: 40vh;
     }
     
     .header-city-main, 
