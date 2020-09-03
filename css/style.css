@@ -48,6 +48,7 @@ body {
     border: none;
     border-radius: .9rem;
     outline: none;
+    max-width: 100rem;
     width: 30%;
     position: relative;
     transform: translateX(-3rem);
@@ -88,6 +89,7 @@ body {
     display: block;
     font-weight: 400;
     font-size: 2.5rem;
+    letter-spacing: .8rem;
 }
 
 .header-city-sub-degree {
@@ -100,4 +102,51 @@ body {
     display: block;
     font-weight: 400;
     font-size: 2.5rem;
+}
+
+/* mobile screen size */
+
+@media only screen and (max-width: 480px) {
+    .heading-primary {
+        font-size: 1.5rem;
+        letter-spacing: .5rem;
+    }
+
+    [type="search"] {
+        width: 40%;
+        transform: translateX(-2rem);
+    }
+
+    .btn {
+        width: 20%;
+        /* font-size: 1rem; */
+    }
+
+    .weather-result {
+        margin-top: 5rem;
+    }
+    
+    .header-city-main, 
+    .header-city-sub
+     {
+        margin-bottom: 1.5rem;
+    }
+
+    .header-city-main {
+        font-size: 2.5rem;
+    }
+    
+    .header-city-sub {
+        font-size: 1.5rem;
+        letter-spacing: 0;
+    }
+    
+    .header-city-sub-degree {
+        font-size: 4rem;
+    }
+    
+    .header-city-sub-weather {
+        font-size: 1.5rem;
+    }
+    
 }
