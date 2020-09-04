@@ -1,6 +1,10 @@
 const searchInput = document.querySelector('#city-search');
-const form = document.querySelector('form');
+const form = document.querySelector('#form');
 const displayResult = document.querySelector('.weather-result');
+const weather = document.querySelector('.header-city-sub-degree');
+const cityHeader = document.querySelector('.header-city-main');
+
+
 
 
 const key = 'a11f31efe5b1f8344d5a80a82c7bd1d6'
@@ -19,11 +23,15 @@ async function getWeatherByLocation(city) {
 function addWeatherToPage(data) {
     const temp = kelvinToCelsius(data.main.temp);
 
-    const weather = document.querySelector('.header-city-sub-degree');
-    weather.textContent = `${temp}°C`
+    
+    weather.textContent = `${temp}°C`;
+    cityHeader.textContent = `${searchInput.value} - ${data.sys.country}`;
+    // displayResult.innerHTML = `<img src="https://api.openweathermap.org/img/w/${data.weather[0].icon}.png" alt="weather"/>`;
+    
+
 }
 
-getWeatherByLocation('Yenagoa');
+getWeatherByLocation();
 
 function kelvinToCelsius(k) {
     return (k - 273.15).toFixed();
@@ -31,7 +39,6 @@ function kelvinToCelsius(k) {
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-
     const city = searchInput.value;
 
     if (city) {
