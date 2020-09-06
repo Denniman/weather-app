@@ -3,11 +3,10 @@ const form = document.querySelector('#form');
 const displayResult = document.querySelector('.weather-result');
 const weather = document.querySelector('.header-city-sub-degree');
 const cityHeader = document.querySelector('.header-city-main');
+require('dotenv').config();
 
-
-
-
-const key = 'a11f31efe5b1f8344d5a80a82c7bd1d6'
+// const key = process.env.API_KEY;
+console.log(process.env);
 
 const URL = (city) => `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`;
 
@@ -26,7 +25,6 @@ function addWeatherToPage(data) {
     
     weather.textContent = `${temp}°C`;
     cityHeader.textContent = `${searchInput.value} - ${data.sys.country}`;
-    // displayResult.innerHTML = `<img src="https://api.openweathermap.org/img/w/${data.weather[0].icon}.png" alt="weather"/>`;
     
 
 }
