@@ -1,10 +1,8 @@
-const staticCacheName = 'site-static-v6';
+const staticCacheName = 'site-static-v7';
 const assets = [
     '/',
     '/index.html',
-    '/manifest.json',
     '/js/app.js',
-    '/js/appsw.js',
     '/css/style.css',
     '/image/Beautiful-Norway.jpg',
     '/image/apple-icon-152x152.png',
@@ -16,7 +14,6 @@ self.addEventListener('install', e => {
     e.waitUntil(
     caches.open(staticCacheName)
     .then(cache => {
-        // console.log('caching shell assets');
         cache.addAll(assets);
     })
     );
@@ -46,5 +43,4 @@ self.addEventListener('fetch', e => {
         })
     );
 })
-
 

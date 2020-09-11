@@ -4,6 +4,13 @@ const displayResult = document.querySelector('.weather-result');
 const weather = document.querySelector('.header-city-sub-degree');
 const cityHeader = document.querySelector('.header-city-main');
 
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js')
+    .then((reg) => console.log('service worker registered', reg))
+    .catch((err) => console.log('service worker not registered', err))
+}
+
+
 const key = "a11f31efe5b1f8344d5a80a82c7bd1d6";
 
 const URL = (city) => `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`;
@@ -23,7 +30,7 @@ async function getWeatherByLocation(city) {
  function addWeatherToPage(data) {
 
     const temp = kelvinToCelsius(data.main.temp);
- 
+
 
     weather.textContent = `${temp}°`;
     const divIcon = document.createElement('span');
@@ -34,7 +41,6 @@ async function getWeatherByLocation(city) {
     let now = new Date(data.sys.sunrise * 1000);
     document.querySelector('.header-city-sub').textContent = dateMaker(now); 
     
-
 }
 
 
@@ -50,7 +56,6 @@ form.addEventListener('submit', (e) => {
         getWeatherByLocation(city);
     }
 })
-
 
 
 function dateMaker(date) {
@@ -91,7 +96,6 @@ function dateMaker(date) {
 // get data to local storage
 function localStorageData() {
     const cachedQuery = localStorage.getItem('city');
-    console.log({cachedQuery});
     if (cachedQuery) {
         getWeatherByLocation(cachedQuery);
     }
