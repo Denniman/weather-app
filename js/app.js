@@ -38,8 +38,8 @@ async function getWeatherByLocation(city) {
     weather.appendChild(divIcon);
     cityHeader.textContent = `${searchInput.value.toUpperCase()} - ${data.sys.country}`;
     let now = new Date(data.sys.sunrise * 1000);
-    document.querySelector('.header-city-sub').textContent = dateMaker(now); 
-    
+    document.querySelector('.header-city-sub').textContent = dateMaker(now);
+     
 }
 
 
