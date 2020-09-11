@@ -57,6 +57,19 @@ form.addEventListener('submit', (e) => {
 })
 
 
+
+
+// get data to local storage
+function localStorageData() {
+    const cachedQuery = localStorage.getItem('city');
+    if (cachedQuery) {
+        getWeatherByLocation(cachedQuery);
+    }
+}
+
+localStorageData();
+
+
 function dateMaker(date) {
     const months = [
         'January',
@@ -89,16 +102,4 @@ function dateMaker(date) {
     return `${day} ${t} ${month} ${year}`;
 }
 
-
-
-
-// get data to local storage
-function localStorageData() {
-    const cachedQuery = localStorage.getItem('city');
-    if (cachedQuery) {
-        getWeatherByLocation(cachedQuery);
-    }
-}
-
-localStorageData();
 
