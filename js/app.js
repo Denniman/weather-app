@@ -1,6 +1,5 @@
 const searchInput = document.querySelector('#city-search');
 const form = document.querySelector('#form');
-const displayResult = document.querySelector('.weather-result');
 const weather = document.querySelector('.header-city-sub-degree');
 const cityHeader = document.querySelector('.header-city-main');
 
