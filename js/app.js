@@ -5,8 +5,8 @@ const cityHeader = document.querySelector('.header-city-main');
 
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js')
-    .then((reg) => console.log('service worker registered', reg))
-    .catch((err) => console.log('service worker not registered', err))
+    .then((reg) => console.log('service worker registered'))
+    .catch((err) => console.log('service worker not registered'))
 }
 
 
@@ -39,7 +39,7 @@ async function getWeatherByLocation(city) {
     cityHeader.textContent = `${searchInput.value.toUpperCase()} - ${data.sys.country}`;
     let now = new Date(data.sys.sunrise * 1000);
     document.querySelector('.header-city-sub').textContent = dateMaker(now);
-     
+
 }
 
 
