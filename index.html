@@ -7,7 +7,12 @@
     <link rel="icon" sizes="152x152" href="/image/apple-icon-152x152.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="manifest" href="manifest.json">
+    <!-- ios support -->
+    <link rel="apple-touch-icon" href="/image/icons/96x96.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#aa7700">
+    <meta name="theme-color" content="#BB4242">
     <title>Weather App</title>
+
 </head>
 <body>
     <main>
@@ -25,16 +30,23 @@
             <div class="weather-result">
                 <h2 class="heading-tertiary">
                     <span class="header-city-main"></span>
-                    <!-- <span class="header-city-sub">Thursday, September 03, 2020</span> -->
+                    <span class="header-city-sub"></span>
                     <span class="header-city-sub-degree"></span>
                     <span class="header-city-sub-weather"></span>
                 </h2>
             </div>
 
         </div>
+
     </main>
 
+    <footer class="footer">
+            <p class="footer-text">Built with &#128154; by <a href="#">Dennis Terna</a></p>
 
+    </footer>
+
+
+    <script src="js/appsw.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>
